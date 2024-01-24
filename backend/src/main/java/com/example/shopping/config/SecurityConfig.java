@@ -37,7 +37,7 @@ public class SecurityConfig {
                 .httpBasic().disable()
                 .authorizeRequests()
                 .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
-                .mvcMatchers("/signup", "/login", "/users/refresh").permitAll()
+                .mvcMatchers( "/members/signup", "/members/login", "/members/refreshToken").permitAll()
                 .mvcMatchers(HttpMethod.GET, "/**").hasAnyRole("USER", "MANAGER", "ADMIN")
                 .mvcMatchers(HttpMethod.POST, "/**").hasAnyRole("USER", "MANAGER", "ADMIN")
                 .anyRequest().hasAnyRole()
