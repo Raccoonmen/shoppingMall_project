@@ -57,7 +57,6 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         // config.setAllowCredentials(true);
-        // https://gareen.tistory.com/66
         config.addAllowedOrigin("*");
         config.addAllowedMethod("*");
         config.setAllowedMethods(List.of("GET","POST","DELETE","PATCH","OPTION","PUT"));
